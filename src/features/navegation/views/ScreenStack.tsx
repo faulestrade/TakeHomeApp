@@ -13,8 +13,8 @@ const ScreenStack = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#C3C4C2" }}>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="ArtistDetails" component={ArtistDetails} />
           <Stack.Screen name="ArtistList" component={ArtistList} />
+          <Stack.Screen name="ArtistDetails" component={ArtistDetails} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
