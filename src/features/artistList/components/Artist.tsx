@@ -6,7 +6,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import styles from "../views/styles";
+import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
 const Artist = ({
@@ -21,14 +21,7 @@ const Artist = ({
   const { navigate } = useNavigation();
   return (
     <TouchableOpacity
-      style={{
-        width: "85%",
-        alignItems: "center",
-        flexDirection: "row",
-        marginTop: "5%",
-        borderWidth: 1,
-        borderRadius: 5,
-      }}
+      style={styles.artistButton}
       onPress={() =>
         navigate({
           name: "ArtistDetails" as never,
@@ -36,12 +29,7 @@ const Artist = ({
         })
       }
     >
-      <Image
-        style={{ height: 40, width: 40, borderRadius: 40 }}
-        height={40}
-        width={40}
-        source={image}
-      ></Image>
+      <Image style={styles.image} height={40} width={40} source={image}></Image>
       <Text style={styles.artistTypeText}>{name}</Text>
     </TouchableOpacity>
   );

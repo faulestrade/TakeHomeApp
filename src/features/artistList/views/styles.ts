@@ -28,18 +28,4 @@ export default StyleSheet.create({
     alignSelf: "flex-start",
     fontWeight: "bold",
   },
-
-  artistButton: {
-    width: "85%",
-    height: "4%",
-    backgroundColor: "#black",
-    borderRadius: 3,
-    borderColor: "black",
-    borderWidth: 2,
-  },
-  artistTypeText: {
-    flex: 1,
-    fontSize: 13,
-    marginLeft: "2%",
-  },
 });

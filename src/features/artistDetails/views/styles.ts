@@ -5,6 +5,11 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#C3C4C2",
   },
+  topContainer: {
+    alignItems: "center",
+    marginBottom: "5%",
+  },
+  informationSubContainer: { flexDirection: "row", marginBottom: "5%" },
   generalText: {
     fontSize: 12,
     alignSelf: "flex-start",
@@ -20,7 +25,7 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
   },
-  square: {
+  picture: {
     width: 170,
     height: 190,
     borderRadius: 8,
@@ -34,5 +39,10 @@ export default StyleSheet.create({
     alignSelf: "center",
     justifyContent: "center",
     alignItems: "center",
+  },
+  buttonText: { color: "white" },
+  informationContainer: {
+    marginHorizontal: "9.5%",
+    width: "70%",
   },
 });

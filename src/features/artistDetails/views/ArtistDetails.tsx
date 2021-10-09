@@ -52,17 +52,12 @@ const ArtistDetails = ({
 
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          alignItems: "center",
-          marginBottom: "5%",
-        }}
-      >
-        <Image resizeMode="contain" source={image} style={styles.square} />
+      <View style={styles.topContainer}>
+        <Image resizeMode="contain" source={image} style={styles.picture} />
         <Text style={styles.artistNameText}>{dataArtist.name}</Text>
       </View>
-      <View style={{ marginHorizontal: "9.5%", width: "70%" }}>
-        <View style={{ flexDirection: "row", marginBottom: "5%" }}>
+      <View style={styles.informationContainer}>
+        <View style={styles.informationSubContainer}>
           <Text style={styles.titleText}>Genres:</Text>
           <Text style={styles.generalText}>{dataArtist.genres.join("\n")}</Text>
         </View>
@@ -77,7 +72,7 @@ const ArtistDetails = ({
         onPress={() => navigate("ArtistList" as never)}
         style={styles.button}
       >
-        <Text style={{ color: "white" }}>Back</Text>
+        <Text style={styles.buttonText}>Back</Text>
       </TouchableOpacity>
     </View>
   );
