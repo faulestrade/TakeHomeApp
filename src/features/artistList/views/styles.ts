@@ -28,13 +28,7 @@ export default StyleSheet.create({
     alignSelf: "flex-start",
     fontWeight: "bold",
   },
-  button: {
-    width: 80,
-    height: 50,
-    backgroundColor: "#6FE573",
-    borderRadius: 8,
-    marginTop: 20,
-  },
+
   artistButton: {
     width: "85%",
     height: "4%",

@@ -41,23 +41,29 @@ const ArtistList = () => {
           onChangeText={setSearch}
         ></TextInput>
       </View>
-      <FlatList
-        data={data}
-        style={{ width: "85%" }}
-        renderItem={({
-          item,
-        }: {
-          item: { images: { url: string }[]; name: string; uri: string };
-        }) => (
-          <Artist
-            image={{
-              uri: item.images[0].url,
-            }}
-            name={item.name}
-          />
-        )}
-        keyExtractor={(item) => item.uri}
-      />
+      {search ? (
+        <FlatList
+          data={data}
+          style={{ width: "85%" }}
+          contentContainerStyle={{ alignItems: "center" }}
+          renderItem={({
+            item,
+          }: {
+            item: { images: { url: string }[]; name: string; uri: string };
+          }) => (
+            <Artist
+              image={{
+                uri: item.images[0].url,
+              }}
+              name={item.name}
+              uri={item.uri}
+            />
+          )}
+          keyExtractor={(item) => item.uri}
+        />
+      ) : (
+        <Text style={styles.welcomeText}>Welcome</Text>
+      )}
     </View>
   );
 };

@@ -12,9 +12,11 @@ import { useNavigation } from "@react-navigation/native";
 const Artist = ({
   image,
   name,
+  uri,
 }: {
   image: ImageSourcePropType;
   name: string;
+  uri: string;
 }) => {
   const { navigate } = useNavigation();
   return (
@@ -27,7 +29,12 @@ const Artist = ({
         borderWidth: 1,
         borderRadius: 5,
       }}
-      onPress={() => navigate("ArtistDetails" as never)}
+      onPress={() =>
+        navigate({
+          name: "ArtistDetails" as never,
+          params: { uri, image } as never,
+        })
+      }
     >
       <Image
         style={{ height: 40, width: 40, borderRadius: 40 }}
